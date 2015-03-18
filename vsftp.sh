@@ -15,7 +15,7 @@ YUM_INSTALL_LIST="vsftpd db4 db4-tcl db4-utils"
 APT_INSTALL_LIST="vsftpd db4.6-util"
 
 # 通常只需要编辑以下两个变量
-FTP_USER=vitrualftp
+FTP_USER=virtualftp
 FTP_HOME=/var/ftp
 
 VSFTPD_BASE_DIR=/etc/vsftpd
