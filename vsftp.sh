@@ -107,8 +107,8 @@ echo ftpuser1 >> $VSFTPD_BASE_DIR/passwd.txt
 echo `< /dev/urandom tr -dc A-Za-z0-9 | head -c 20` >> $VSFTPD_BASE_DIR/passwd.txt
 
 # 修改PAM认证文件
-#echo "    auth       required     pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd" > /etc/pam.d/vsftpd
-#echo "    account       required     pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd" >> /etc/pam.d/vsftpd
+#echo "    auth         required     pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd" > /etc/pam.d/vsftpd
+#echo "    account      required     pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd" >> /etc/pam.d/vsftpd
 sed '/#%PAM-1.0/a\auth sufficient pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd\naccount sufficient pam_userdb.so db=$VSFTPD_BASE_DIR/user_passwd' /etc/pam.d/vsftpd
 
 
